@@ -10,6 +10,10 @@ Take a screenshot at the 360th frame:
 ```bash
 ffmpeg -i input/sample_1min.mp4 -vf "select=eq(n\,360)" -vsync vfr -q:v 2 frame.jpg
 ```
+## Build Docker environment:
+```bash
+docker build -t pixa-pipeline .
+```
 
 ## Launch an Interactive Docker Shell
 ```bash

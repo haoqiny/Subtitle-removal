@@ -60,7 +60,7 @@ class Pipeline:
                         tmask[y : y + h, x : x + w] = 255
             cv2.imwrite(f"{self.tmasksDir}/{path.name}", tmask)
 
-    def stageD(self, batchSize: int = 9):
+    def stageD(self, batchSize: int = 4):
         logging.info("StageD: Batch split")
         self.recordJobStatus("StageD: Batch split")
         framesGlob = sorted(self.framesDir.glob("*.png"))
